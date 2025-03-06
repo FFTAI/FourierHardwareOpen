@@ -22,7 +22,9 @@ This tutorial introduces the basic usage of Fourier Hardware. Please use the lat
 
 ### Pull or Load Docker Image
 
-You can use `docker pull` or `docker load` to load the specified image. The current image tag is **"v2.2"**.
+You can use `docker pull` or `docker load` to load the specified image. The current image tag is **v2.2**.
+
+For **external developers**, please refer to [fourier_hardware.tar](https://pan.baidu.com/s/1kgBkNJhgA4OA3rPBYyqMvQ?pwd=vi5q).
 
 #### Load Docker Image:
 

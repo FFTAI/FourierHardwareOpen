@@ -23,7 +23,9 @@
 
 ### 拉取或加载 Docker 镜像
 
-可以使用 `docker pull` 或 `docker load` 加载指定的镜像。当前使用的镜像 tag 为 **"v2.2"**。
+可以使用 `docker pull` 或 `docker load` 加载指定的镜像。当前使用的镜像 tag 为 **v2.2**。
+
+外部下载地址请点击[fourier_hardware.tar](https://pan.baidu.com/s/1kgBkNJhgA4OA3rPBYyqMvQ?pwd=vi5q)。
 
 #### 加载 Docker 镜像：
 
