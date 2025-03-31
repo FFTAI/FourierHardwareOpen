@@ -5,7 +5,8 @@
 1. **README.md**：基本介绍
 2. **python** 文件夹：包含一些简单的 Python 脚本
 3. **run_docker.bash**：Docker 启动脚本
-4. **tutorial_gr1t2.ipynb**、**tutorial_gr2t2.ipynb**、**tutorial_grmini_t1.ipynb**：基本功能使用和介绍
+4. **tutorial_\*.ipynb**：基本功能使用和介绍
+5. **update**：grxsot 和 fourier hardware的升级包
 
 ## 目录
 
@@ -14,6 +15,7 @@
   - [加载 Docker 镜像](#加载-docker-镜像)
   - [使用脚本启动容器](#使用脚本启动容器)
 - [使用 Jupyter Notebook 运行 Python 教程](#使用-jupyter-notebook-运行-python-教程)
+- [更新镜像](#更新镜像)
 - [许可](#许可)
 
 
@@ -48,6 +50,14 @@ bash run_docker.bash
 ```sh
 jupyter notebook --allow-root
 ```
+
+## 更新镜像
+
+通过使用升级包更新镜像，cd 到update文件夹，执行下面命令：
+```sh
+dpkg -i *.deb
+```
+升级完之后可以使用docker commit 保存最新的镜像。
 
 ## 许可
 
