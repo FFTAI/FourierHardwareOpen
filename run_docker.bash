@@ -11,4 +11,5 @@ docker run -it --rm \
  -v $HOME/.Xauthority:/root/.Xauthority \
  --privileged \
  --net=host \
-  fourier_hardware:v2.2 bash
+ --name fourier_hardware \
+ fourier_hardware:v2.2 bash
