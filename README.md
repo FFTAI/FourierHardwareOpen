@@ -20,25 +20,49 @@ This repository includes the following contents:
 
 ## Running Fourier Hardware with Docker
 
-This tutorial introduces the basic usage of Fourier Hardware. Please use the latest Docker image for your experiments.
+This tutorial introduces the basic usage of Fourier Hardware. Please follow the instructions below to get started.
 
-### Pulling or Loading Docker Image
+### Downloading Docker Image
 
-You can use `docker pull` or `docker load` to load the specified image. The currently used image tag is **v2.2**.
+The environment is built on the base image and updated via deb packages. The base image tag is **v2.2**.
 
-To download the image externally, click [fourier_hardware.tar](https://pan.baidu.com/s/1kgBkNJhgA4OA3rPBYyqMvQ?pwd=vi5q).
+To download the base image file, click [fourier_hardware.tar](https://pan.baidu.com/s/1kgBkNJhgA4OA3rPBYyqMvQ?pwd=vi5q).
 
-#### Load Docker Image:
+### Loading Docker Image
 
 ```sh
 docker load -i fourier_hardware.tar
 ```
 
-#### Using Script to Start Container:
+### Using Script to Start Container:
+
+After downloading the image, you can start the container using the following script which is located in the root directory of the repository:
 
 ```sh
 bash run_docker.bash
 ```
+This script will start a docker container with the default **fourier_hardware:v2.2** image.
+
+> Note: After exiting the container, it will be removed automatically. If you want to keep the container after exiting it, please modify the script accordingly.
+
+### Upgrading to Latest Version(Optional)
+
+After entering the container, navigate to the **update** folder in the repository and run the following command to upgrade the packages:
+
+```sh
+dpkg -i *.deb
+```
+
+This command will install the latest version of the packages. After the update, you can save the latest changes using `docker commit` on a new terminal window to update the current image.
+
+**Example:**
+
+```sh
+docker commit fourier_hardware fourier_hardware:latest
+```
+This command will create a new image with the latest changes.
+
+The image name in the **run_docker.bash** script should then be updated to **fourier_hardware:latest** to use the latest version.
 
 ## Running Python Tutorial with Jupyter Notebook
 
@@ -49,16 +73,6 @@ This tutorial uses **gr2t2** as an example to introduce the basic usage of Fouri
 ```sh
 jupyter notebook --allow-root
 ```
-
-## Updating Image
-
-To update the image using the upgrade package, navigate to the `update` folder and run the following command:
-
-```sh
-dpkg -i *.deb
-```
-
-After the update, you can save the latest image using `docker commit`.
 
 ## License
 
