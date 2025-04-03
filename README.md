@@ -28,6 +28,8 @@ The environment is built on the base image and updated via deb packages. The bas
 
 To download the base image file, click [fourier_hardware.tar](https://pan.baidu.com/s/1kgBkNJhgA4OA3rPBYyqMvQ?pwd=vi5q).
 
+For video tutorials, please refer to [fourier_hardware_guidance](https://pan.baidu.com/s/1CCJDuOeM5Bt_iUD5rgwsxw?pwd=9kig).
+
 ### Loading Docker Image
 
 ```sh
