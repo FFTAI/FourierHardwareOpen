@@ -12,4 +12,4 @@ docker run -it --rm \
  --privileged \
  --net=host \
  --name fourier_hardware \
- fourier_hardware:v2.2 bash
+ 192.168.3.32:9595/base/fourier_hardware bash
